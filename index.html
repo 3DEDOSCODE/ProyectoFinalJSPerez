@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--link bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!--link animate style-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!--link sweet-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!--link favicon-->
+  <link rel="shortcut icon" href="assets/logo-white.png">
+  <!--link css-->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/3f13496d3c.js" crossorigin="anonymous"></script>
+  <title>Tienda Por H o por B</title>
+</head>
+
+<body class="index">
+  <!--bootstrap-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="assets/logo-white.png" width="40px"
+          alt="Logo de la banda."></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/remeras.html">Remeras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/tazas.html">Tazas</a>
+          </li>
+          <div class="container-icon">
+            <div class="container-cart-icon">
+              <img class="iconocarrito" src="assets/carrito-de-compras.png">
+              <div class="count-products">
+                <span id="contador-productos">0</span>
+              </div>
+            </div>
+            <div class="container-cart-products hidden-cart">
+              <div class="row-product hidden">
+                <div class="cart-product">
+                  <div class="info-cart-product">
+                    <span class="cantidad-producto-carrito"></span>
+                    <p class="titulo-producto-carrito"></p>
+                    <span class="precio-producto-carrito"></span>
+                  </div>
+                  <img class="iconox" src="assets/x.png">
+                </div>
+              </div>
+              <div class="carritototal hidden">
+                <h3>Total:</h3>
+                <span class="total-pagar"></span>
+              </div>
+              <p class="carritovacio">El carrito está vacío</p>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="mainindex">
+    <div class="div">
+      <h1 class="animate__animated animate__flash">Bienvenido a la tienda oficial de Por H o por B!</h1>
+      <img class="imagenfondo" src="assets/maxresdefault.jpg">
+    </div>
+    <div class="botones">
+      <input id="inputBuscar" type="text" placeholder="Que buscas?">
+      <button id="botonBuscar">Buscar Articulo</button>
+      <button id="botonAgregar">Agregar Articulo</button>
+    </div>
+    <div id="searchContainer"></div>
+    <div id="newContainer"></div>
+    <div class="contenedorcardhtml"></div>
+  </main>
+  <!--api-->
+  <section id="demo">
+    <div class="ow-widget">
+      <div class="ow-row">
+        <span class="ow-city-name"></span>
+      </div>
+      <div class="ow-row">
+        <div class="wi ow-ico ow-ico-current pull-left"></div>
+        <div class="ow-temp-current pull-left"></div>
+        <div class="ow-current-desc pull-left">
+          <div>Presion: <span class="ow-pressure"></span></div>
+          <div>Humedad: <span class="ow-humidity"></span></div>
+          <div>Viento: <span class="ow-wind"></span></div>
+        </div>
+      </div>
+      <div class="ow-row ow-forecast">
+        <div class="ow-forecast-item">
+          <div class="ow-day"></div>
+          <div class="wi ow-ico ow-ico-forecast"></div>
+          <div class="ow-forecast-temp">
+            <span class="max"></span>
+            <span class="min"></span>
+          </div>
+        </div>
+
+        <div class="ow-forecast-item">
+          <div class="ow-day"></div>
+          <div class="wi ow-ico ow-ico-forecast"></div>
+          <div class="ow-forecast-temp">
+            <span class="max"></span>
+            <span class="min"></span>
+          </div>
+        </div>
+
+        <div class="ow-forecast-item">
+          <div class="ow-day"></div>
+          <div class="wi ow-ico ow-ico-forecast"></div>
+          <div class="ow-forecast-temp">
+            <span class="max"></span>
+            <span class="min"></span>
+          </div>
+        </div>
+
+        <div class="ow-forecast-item">
+          <div class="ow-day"></div>
+          <div class="wi ow-ico ow-ico-forecast"></div>
+          <div class="ow-forecast-temp">
+            <span class="max"></span>
+            <span class="min"></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="main.js"></script>
+  <!--script bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <footer class="footer">
+      <div class="redes">
+          <span><a title="Instagram" href="https://www.instagram.com//"
+                  alt="Pagina oficial de Instagram"><i class="fa-brands fa-instagram fa-xl"
+                      style="color: #ffffff;"></i></a></span>
+          <span><a title="Facebook" href="https://www.facebook.com//"
+                  alt="Pagina oficial de Facebook"><i class="fa-brands fa-facebook fa-xl"
+                      style="color: #ffffff;"></i></a></span>
+          <span><a title="Twitter" href="https://twitter.com/" alt="Pagina oficial de Twitter"><i
+                      class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i></a></span>
+          <span><a title="TikTok" href="https://www.tiktok.com/" alt="Pagina oficial de tiktok"><i
+                      class="fa-brands fa-tiktok fa-xl" style="color: #ffffff;"></i></a></span>
+          <span><a title="YouTube" href="https://www.youtube.com/"
+                  alt="Pagina oficial de youtube"><i class="fa-brands fa-youtube fa-xl"
+                      style="color: #ffffff;"></i></a></span>
+          <span><a title="Spotify" href="https://open.spotify.com/"
+                  alt="Link cuenta de spotify"><i class="fa-brands fa-spotify fa-xl"
+                      style="color: #ffffff;"></i></a></span>
+      </div>
+      <small>&copy; 2023 <b>PK2 Design</b> - Todos los Derechos Reservados.</small>
+  </footer>
+</body>
+
+</html>
